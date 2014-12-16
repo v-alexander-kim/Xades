@@ -142,8 +142,9 @@ namespace Microsoft.Xades.Test
 
 			if (retVal == KnownTsaResponsePkiStatus.Granted)
 			{
-				timeStampXmlNode = asn1Parser.ParseTree.SelectSingleNode("//Universal_Constructed_Sequence/Universal_Constructed_Sequence/ContextSpecific_Constructed_A0/RawData[../../Universal_Primitive_Oid/@Value=\"1.2.840.113549.1.7.2\"]");
-				if (timeStampXmlNode != null)
+				//timeStampXmlNode = asn1Parser.ParseTree.SelectSingleNode("//Universal_Constructed_Sequence/Universal_Constructed_Sequence/ContextSpecific_Constructed_A0/RawData[../../Universal_Primitive_Oid/@Value=\"1.2.840.113549.1.7.2\"]");
+                timeStampXmlNode = asn1Parser.ParseTree.SelectSingleNode("//Universal_Constructed_Sequence/Universal_Constructed_Sequence/RawData[../Universal_Primitive_Oid/@Value=\"1.2.840.113549.1.7.2\"]");
+                if (timeStampXmlNode != null)
 				{
 					this.tsaTimeStamp = Convert.FromBase64String(timeStampXmlNode.InnerText);
 				}

@@ -172,10 +172,14 @@ namespace Microsoft.Xades.Test
 				retVal.HeaderLength = 2 + lengthLength;
 
 				//Fetch the raw data
-				retVal.BytesToParse = new byte[retVal.BytesToParseLength];
-				for (lengthCounter = 0; lengthCounter < retVal.BytesToParseLength; lengthCounter++)
+                retVal.BytesToParse = new byte[retVal.BytesToParseLength];
+                //store data with outer tag and length
+                retVal.EncodedData = new byte[retVal.HeaderLength + retVal.BytesToParseLength];
+                Array.Copy(currentBytesToParse, index - retVal.HeaderLength, retVal.EncodedData, 0, retVal.HeaderLength);
+                
+                for (lengthCounter = 0; lengthCounter < retVal.BytesToParseLength; lengthCounter++)
 				{
-					retVal.BytesToParse[lengthCounter] = currentBytesToParse[index++];
+                    retVal.EncodedData[retVal.HeaderLength + lengthCounter] = retVal.BytesToParse[lengthCounter] = currentBytesToParse[index++];
 				}
 
 				retVal.TagName = retVal.TagClass.ToString() + "_" + retVal.TagConstructedFlag.ToString() + "_";
@@ -224,7 +228,7 @@ namespace Microsoft.Xades.Test
 				newXmlAttribute.Value = asn1ItemData.BytesToParseLength.ToString();
 				newChildXmlNode.Attributes.Append(newXmlAttribute);
 				rawDataXmlNode = currentXmlNode.OwnerDocument.CreateElement("RawData");
-				rawDataXmlNode.InnerText = Convert.ToBase64String(asn1ItemData.BytesToParse);
+				rawDataXmlNode.InnerText = Convert.ToBase64String(asn1ItemData.EncodedData);
 				newChildXmlNode.AppendChild(rawDataXmlNode);
 				currentXmlNode.AppendChild(newChildXmlNode);
 
@@ -491,6 +495,7 @@ namespace Microsoft.Xades.Test
 		private long headerLength;
 		private long length;
 		private byte[] bytesToParse;
+        private byte[] encodedData;
 		
 		public TagClasses TagClass
 		{
@@ -563,6 +568,18 @@ namespace Microsoft.Xades.Test
 				this.length = value;
 			}
 		}
+
+        public byte[] EncodedData
+        {
+            get
+            {
+                return this.encodedData;
+            }
+            set
+            {
+                this.encodedData = value;
+            }
+        }
 
 		public byte[] BytesToParse
 		{
