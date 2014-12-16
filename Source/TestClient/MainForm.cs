@@ -433,8 +433,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.browseForFileToReadButton);
             this.groupBox1.Controls.Add(this.signatureFileToReadTextBox);
             this.groupBox1.Controls.Add(this.label1);
@@ -457,8 +457,8 @@ namespace Microsoft.Xades.Test
             // 
             // signatureFileToReadTextBox
             // 
-            this.signatureFileToReadTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.signatureFileToReadTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.signatureFileToReadTextBox.Location = new System.Drawing.Point(96, 17);
             this.signatureFileToReadTextBox.Name = "signatureFileToReadTextBox";
             this.signatureFileToReadTextBox.Size = new System.Drawing.Size(560, 20);
@@ -474,8 +474,8 @@ namespace Microsoft.Xades.Test
             // 
             // checkSignatureLabel
             // 
-            this.checkSignatureLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkSignatureLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.checkSignatureLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkSignatureLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkSignatureLabel.Location = new System.Drawing.Point(144, 72);
@@ -495,8 +495,8 @@ namespace Microsoft.Xades.Test
             // 
             // signatureTypeLabel
             // 
-            this.signatureTypeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.signatureTypeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.signatureTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signatureTypeLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.signatureTypeLabel.Location = new System.Drawing.Point(144, 48);
@@ -506,9 +506,9 @@ namespace Microsoft.Xades.Test
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(8, 8);
@@ -528,9 +528,9 @@ namespace Microsoft.Xades.Test
             // 
             // tabControl2
             // 
-            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage5);
@@ -607,8 +607,8 @@ namespace Microsoft.Xades.Test
             // 
             // envelopingDocumentTextBox
             // 
-            this.envelopingDocumentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.envelopingDocumentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.envelopingDocumentTextBox.Enabled = false;
             this.envelopingDocumentTextBox.Location = new System.Drawing.Point(136, 283);
             this.envelopingDocumentTextBox.Name = "envelopingDocumentTextBox";
@@ -647,8 +647,8 @@ namespace Microsoft.Xades.Test
             // 
             // externalDocumentUrlTextBox
             // 
-            this.externalDocumentUrlTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.externalDocumentUrlTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.externalDocumentUrlTextBox.Enabled = false;
             this.externalDocumentUrlTextBox.Location = new System.Drawing.Point(136, 24);
             this.externalDocumentUrlTextBox.Name = "externalDocumentUrlTextBox";
@@ -658,8 +658,8 @@ namespace Microsoft.Xades.Test
             // 
             // addReferenceButton
             // 
-            this.addReferenceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.addReferenceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.addReferenceButton.Location = new System.Drawing.Point(136, 368);
             this.addReferenceButton.Name = "addReferenceButton";
             this.addReferenceButton.Size = new System.Drawing.Size(136, 32);
@@ -669,8 +669,8 @@ namespace Microsoft.Xades.Test
             // 
             // includedXmltextBox
             // 
-            this.includedXmltextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.includedXmltextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.includedXmltextBox.Location = new System.Drawing.Point(136, 56);
             this.includedXmltextBox.Multiline = true;
             this.includedXmltextBox.Name = "includedXmltextBox";
@@ -707,8 +707,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox15
             // 
-            this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox15.Controls.Add(this.includeKeyValueCheckBox);
             this.groupBox15.Controls.Add(this.selectCertificateButton);
             this.groupBox15.Location = new System.Drawing.Point(8, 8);
@@ -720,8 +720,6 @@ namespace Microsoft.Xades.Test
             // 
             // includeKeyValueCheckBox
             // 
-            this.includeKeyValueCheckBox.Checked = true;
-            this.includeKeyValueCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.includeKeyValueCheckBox.Location = new System.Drawing.Point(16, 24);
             this.includeKeyValueCheckBox.Name = "includeKeyValueCheckBox";
             this.includeKeyValueCheckBox.Size = new System.Drawing.Size(176, 24);
@@ -730,8 +728,8 @@ namespace Microsoft.Xades.Test
             // 
             // selectCertificateButton
             // 
-            this.selectCertificateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.selectCertificateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.selectCertificateButton.Location = new System.Drawing.Point(11, 54);
             this.selectCertificateButton.Name = "selectCertificateButton";
             this.selectCertificateButton.Size = new System.Drawing.Size(108, 36);
@@ -741,9 +739,9 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox14
             // 
-            this.groupBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox14.Controls.Add(this.viewCertificateButton);
             this.groupBox14.Controls.Add(this.label4);
             this.groupBox14.Controls.Add(this.certificateInfoIssuedLabel);
@@ -758,8 +756,8 @@ namespace Microsoft.Xades.Test
             // 
             // viewCertificateButton
             // 
-            this.viewCertificateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.viewCertificateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.viewCertificateButton.Enabled = false;
             this.viewCertificateButton.Location = new System.Drawing.Point(11, 166);
             this.viewCertificateButton.Name = "viewCertificateButton";
@@ -778,8 +776,8 @@ namespace Microsoft.Xades.Test
             // 
             // certificateInfoIssuedLabel
             // 
-            this.certificateInfoIssuedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.certificateInfoIssuedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.certificateInfoIssuedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.certificateInfoIssuedLabel.Location = new System.Drawing.Point(129, 24);
             this.certificateInfoIssuedLabel.Name = "certificateInfoIssuedLabel";
@@ -796,8 +794,8 @@ namespace Microsoft.Xades.Test
             // 
             // certificateInfoIssuerLabel
             // 
-            this.certificateInfoIssuerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.certificateInfoIssuerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.certificateInfoIssuerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.certificateInfoIssuerLabel.Location = new System.Drawing.Point(129, 104);
             this.certificateInfoIssuerLabel.Name = "certificateInfoIssuerLabel";
@@ -818,8 +816,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox13
             // 
-            this.groupBox13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox13.Controls.Add(this.signatureValueIdTextBox);
             this.groupBox13.Controls.Add(this.label2);
             this.groupBox13.Controls.Add(this.signatureIdTextBox);
@@ -835,8 +833,8 @@ namespace Microsoft.Xades.Test
             // 
             // signatureValueIdTextBox
             // 
-            this.signatureValueIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.signatureValueIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.signatureValueIdTextBox.Location = new System.Drawing.Point(160, 64);
             this.signatureValueIdTextBox.Name = "signatureValueIdTextBox";
             this.signatureValueIdTextBox.Size = new System.Drawing.Size(504, 20);
@@ -853,8 +851,8 @@ namespace Microsoft.Xades.Test
             // 
             // signatureIdTextBox
             // 
-            this.signatureIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.signatureIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.signatureIdTextBox.Location = new System.Drawing.Point(160, 16);
             this.signatureIdTextBox.Name = "signatureIdTextBox";
             this.signatureIdTextBox.Size = new System.Drawing.Size(504, 20);
@@ -871,8 +869,8 @@ namespace Microsoft.Xades.Test
             // 
             // signingTimeTextBox
             // 
-            this.signingTimeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.signingTimeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.signingTimeTextBox.Location = new System.Drawing.Point(160, 40);
             this.signingTimeTextBox.Name = "signingTimeTextBox";
             this.signingTimeTextBox.Size = new System.Drawing.Size(504, 20);
@@ -888,8 +886,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox7
             // 
-            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.label17);
             this.groupBox7.Controls.Add(this.label16);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -920,8 +918,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox5
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.issuerNameLabel);
             this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.Controls.Add(this.digestValueLabel);
@@ -939,8 +937,8 @@ namespace Microsoft.Xades.Test
             // 
             // issuerNameLabel
             // 
-            this.issuerNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.issuerNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.issuerNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.issuerNameLabel.Location = new System.Drawing.Point(160, 48);
             this.issuerNameLabel.Name = "issuerNameLabel";
@@ -957,8 +955,8 @@ namespace Microsoft.Xades.Test
             // 
             // digestValueLabel
             // 
-            this.digestValueLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.digestValueLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.digestValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.digestValueLabel.Location = new System.Drawing.Point(160, 120);
             this.digestValueLabel.Name = "digestValueLabel";
@@ -967,8 +965,8 @@ namespace Microsoft.Xades.Test
             // 
             // digestMethodLabel
             // 
-            this.digestMethodLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.digestMethodLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.digestMethodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.digestMethodLabel.Location = new System.Drawing.Point(160, 96);
             this.digestMethodLabel.Name = "digestMethodLabel";
@@ -977,8 +975,8 @@ namespace Microsoft.Xades.Test
             // 
             // issuerSerialLabel
             // 
-            this.issuerSerialLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.issuerSerialLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.issuerSerialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.issuerSerialLabel.Location = new System.Drawing.Point(160, 24);
             this.issuerSerialLabel.Name = "issuerSerialLabel";
@@ -1011,8 +1009,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.includeSignatureProductionPlaceCheckBox);
             this.groupBox2.Controls.Add(this.signatureCountryNameTextBox);
             this.groupBox2.Controls.Add(this.label9);
@@ -1040,8 +1038,8 @@ namespace Microsoft.Xades.Test
             // 
             // signatureCountryNameTextBox
             // 
-            this.signatureCountryNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.signatureCountryNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.signatureCountryNameTextBox.Enabled = false;
             this.signatureCountryNameTextBox.Location = new System.Drawing.Point(160, 120);
             this.signatureCountryNameTextBox.Name = "signatureCountryNameTextBox";
@@ -1059,8 +1057,8 @@ namespace Microsoft.Xades.Test
             // 
             // signaturePostalCodeTextBox
             // 
-            this.signaturePostalCodeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.signaturePostalCodeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.signaturePostalCodeTextBox.Enabled = false;
             this.signaturePostalCodeTextBox.Location = new System.Drawing.Point(160, 96);
             this.signaturePostalCodeTextBox.Name = "signaturePostalCodeTextBox";
@@ -1078,8 +1076,8 @@ namespace Microsoft.Xades.Test
             // 
             // signatureStateOrProvinceTextBox
             // 
-            this.signatureStateOrProvinceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.signatureStateOrProvinceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.signatureStateOrProvinceTextBox.Enabled = false;
             this.signatureStateOrProvinceTextBox.Location = new System.Drawing.Point(160, 72);
             this.signatureStateOrProvinceTextBox.Name = "signatureStateOrProvinceTextBox";
@@ -1097,8 +1095,8 @@ namespace Microsoft.Xades.Test
             // 
             // signatureCityTextBox
             // 
-            this.signatureCityTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.signatureCityTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.signatureCityTextBox.Enabled = false;
             this.signatureCityTextBox.Location = new System.Drawing.Point(160, 48);
             this.signatureCityTextBox.Name = "signatureCityTextBox";
@@ -1128,8 +1126,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox10
             // 
-            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox10.Controls.Add(this.commitmentTypeIndicatorQualifierComboBox);
             this.groupBox10.Controls.Add(this.label23);
             this.groupBox10.Controls.Add(this.commitmentTypeIdentifierURITextBox);
@@ -1168,8 +1166,8 @@ namespace Microsoft.Xades.Test
             // 
             // commitmentTypeIdentifierURITextBox
             // 
-            this.commitmentTypeIdentifierURITextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.commitmentTypeIdentifierURITextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.commitmentTypeIdentifierURITextBox.Enabled = false;
             this.commitmentTypeIdentifierURITextBox.Location = new System.Drawing.Point(160, 72);
             this.commitmentTypeIdentifierURITextBox.Name = "commitmentTypeIdentifierURITextBox";
@@ -1204,8 +1202,8 @@ namespace Microsoft.Xades.Test
             // 
             // commitmentTypeIndicationIdTextBox
             // 
-            this.commitmentTypeIndicationIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.commitmentTypeIndicationIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.commitmentTypeIndicationIdTextBox.Enabled = false;
             this.commitmentTypeIndicationIdTextBox.Location = new System.Drawing.Point(160, 96);
             this.commitmentTypeIndicationIdTextBox.Name = "commitmentTypeIndicationIdTextBox";
@@ -1231,8 +1229,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox9
             // 
-            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox9.Controls.Add(this.label18);
             this.groupBox9.Controls.Add(this.claimedRoleTextBox);
             this.groupBox9.Controls.Add(this.includeSignerRoleCheckBox);
@@ -1253,8 +1251,8 @@ namespace Microsoft.Xades.Test
             // 
             // claimedRoleTextBox
             // 
-            this.claimedRoleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.claimedRoleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.claimedRoleTextBox.Enabled = false;
             this.claimedRoleTextBox.Location = new System.Drawing.Point(160, 48);
             this.claimedRoleTextBox.Multiline = true;
@@ -1275,8 +1273,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox11
             // 
-            this.groupBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox11.Controls.Add(this.dataObjectReferenceTextBox);
             this.groupBox11.Controls.Add(this.dataObjectFormatMimetypeTextBox);
             this.groupBox11.Controls.Add(this.dataObjectDescriptionTextBox);
@@ -1293,8 +1291,8 @@ namespace Microsoft.Xades.Test
             // 
             // dataObjectReferenceTextBox
             // 
-            this.dataObjectReferenceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataObjectReferenceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataObjectReferenceTextBox.Enabled = false;
             this.dataObjectReferenceTextBox.Location = new System.Drawing.Point(152, 96);
             this.dataObjectReferenceTextBox.Name = "dataObjectReferenceTextBox";
@@ -1304,8 +1302,8 @@ namespace Microsoft.Xades.Test
             // 
             // dataObjectFormatMimetypeTextBox
             // 
-            this.dataObjectFormatMimetypeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataObjectFormatMimetypeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataObjectFormatMimetypeTextBox.Enabled = false;
             this.dataObjectFormatMimetypeTextBox.Location = new System.Drawing.Point(152, 72);
             this.dataObjectFormatMimetypeTextBox.Name = "dataObjectFormatMimetypeTextBox";
@@ -1315,8 +1313,8 @@ namespace Microsoft.Xades.Test
             // 
             // dataObjectDescriptionTextBox
             // 
-            this.dataObjectDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataObjectDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataObjectDescriptionTextBox.Enabled = false;
             this.dataObjectDescriptionTextBox.Location = new System.Drawing.Point(152, 48);
             this.dataObjectDescriptionTextBox.Name = "dataObjectDescriptionTextBox";
@@ -1358,8 +1356,8 @@ namespace Microsoft.Xades.Test
             // 
             // addXadesInfoButton
             // 
-            this.addXadesInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.addXadesInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.addXadesInfoButton.Location = new System.Drawing.Point(249, 437);
             this.addXadesInfoButton.Name = "addXadesInfoButton";
             this.addXadesInfoButton.Size = new System.Drawing.Size(195, 35);
@@ -1414,8 +1412,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox8
             // 
-            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox8.Controls.Add(this.label27);
             this.groupBox8.Controls.Add(this.signatureTimeStampIdTextBox);
             this.groupBox8.Controls.Add(this.requestTimeStampButton);
@@ -1439,8 +1437,8 @@ namespace Microsoft.Xades.Test
             // 
             // signatureTimeStampIdTextBox
             // 
-            this.signatureTimeStampIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.signatureTimeStampIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.signatureTimeStampIdTextBox.Location = new System.Drawing.Point(152, 48);
             this.signatureTimeStampIdTextBox.Name = "signatureTimeStampIdTextBox";
             this.signatureTimeStampIdTextBox.Size = new System.Drawing.Size(512, 20);
@@ -1449,8 +1447,8 @@ namespace Microsoft.Xades.Test
             // 
             // requestTimeStampButton
             // 
-            this.requestTimeStampButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.requestTimeStampButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.requestTimeStampButton.Location = new System.Drawing.Point(258, 112);
             this.requestTimeStampButton.Name = "requestTimeStampButton";
             this.requestTimeStampButton.Size = new System.Drawing.Size(172, 39);
@@ -1470,8 +1468,8 @@ namespace Microsoft.Xades.Test
             // 
             // tsaUriTextBox
             // 
-            this.tsaUriTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tsaUriTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tsaUriTextBox.Location = new System.Drawing.Point(152, 24);
             this.tsaUriTextBox.Name = "tsaUriTextBox";
             this.tsaUriTextBox.Size = new System.Drawing.Size(512, 20);
@@ -1496,8 +1494,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox4
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.completeRevocationRefsIdTextBox);
             this.groupBox4.Controls.Add(this.label34);
             this.groupBox4.Controls.Add(this.completeCertificateRefsTextBox);
@@ -1517,8 +1515,8 @@ namespace Microsoft.Xades.Test
             // 
             // completeRevocationRefsIdTextBox
             // 
-            this.completeRevocationRefsIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.completeRevocationRefsIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.completeRevocationRefsIdTextBox.Enabled = false;
             this.completeRevocationRefsIdTextBox.Location = new System.Drawing.Point(120, 151);
             this.completeRevocationRefsIdTextBox.Name = "completeRevocationRefsIdTextBox";
@@ -1536,8 +1534,8 @@ namespace Microsoft.Xades.Test
             // 
             // completeCertificateRefsTextBox
             // 
-            this.completeCertificateRefsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.completeCertificateRefsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.completeCertificateRefsTextBox.Enabled = false;
             this.completeCertificateRefsTextBox.Location = new System.Drawing.Point(120, 50);
             this.completeCertificateRefsTextBox.Name = "completeCertificateRefsTextBox";
@@ -1566,8 +1564,8 @@ namespace Microsoft.Xades.Test
             // 
             // crlFileTextBox
             // 
-            this.crlFileTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.crlFileTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.crlFileTextBox.Enabled = false;
             this.crlFileTextBox.Location = new System.Drawing.Point(120, 122);
             this.crlFileTextBox.Name = "crlFileTextBox";
@@ -1593,8 +1591,8 @@ namespace Microsoft.Xades.Test
             // 
             // injectXadesCInformationButton
             // 
-            this.injectXadesCInformationButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.injectXadesCInformationButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.injectXadesCInformationButton.Location = new System.Drawing.Point(252, 193);
             this.injectXadesCInformationButton.Name = "injectXadesCInformationButton";
             this.injectXadesCInformationButton.Size = new System.Drawing.Size(172, 34);
@@ -1622,8 +1620,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.label35);
             this.groupBox3.Controls.Add(this.xadesXTimeStampIdTextBox);
             this.groupBox3.Controls.Add(this.injectXadesXInformationButton);
@@ -1646,8 +1644,8 @@ namespace Microsoft.Xades.Test
             // 
             // xadesXTimeStampIdTextBox
             // 
-            this.xadesXTimeStampIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.xadesXTimeStampIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.xadesXTimeStampIdTextBox.Location = new System.Drawing.Point(141, 79);
             this.xadesXTimeStampIdTextBox.Name = "xadesXTimeStampIdTextBox";
             this.xadesXTimeStampIdTextBox.Size = new System.Drawing.Size(504, 20);
@@ -1692,8 +1690,8 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox17
             // 
-            this.groupBox17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox17.Controls.Add(this.includeRevocationValuesCheckBox);
             this.groupBox17.Controls.Add(this.includeCertificateValuesCheckBox);
             this.groupBox17.Controls.Add(this.label37);
@@ -1736,8 +1734,8 @@ namespace Microsoft.Xades.Test
             // 
             // revocationValuesIdTextBox
             // 
-            this.revocationValuesIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.revocationValuesIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.revocationValuesIdTextBox.Enabled = false;
             this.revocationValuesIdTextBox.Location = new System.Drawing.Point(120, 112);
             this.revocationValuesIdTextBox.Name = "revocationValuesIdTextBox";
@@ -1747,8 +1745,8 @@ namespace Microsoft.Xades.Test
             // 
             // certificateValuesIdTextBox
             // 
-            this.certificateValuesIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.certificateValuesIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.certificateValuesIdTextBox.Enabled = false;
             this.certificateValuesIdTextBox.Location = new System.Drawing.Point(120, 48);
             this.certificateValuesIdTextBox.Name = "certificateValuesIdTextBox";
@@ -1785,9 +1783,9 @@ namespace Microsoft.Xades.Test
             // 
             // groupBox6
             // 
-            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.checkSelectionGroupBox);
             this.groupBox6.Controls.Add(this.verifyXmlRenderTree);
             this.groupBox6.Controls.Add(this.readOnlyNoCheckcheckBox);
@@ -2052,9 +2050,9 @@ namespace Microsoft.Xades.Test
             // 
             // verifyXmlRenderTree
             // 
-            this.verifyXmlRenderTree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.verifyXmlRenderTree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.verifyXmlRenderTree.Location = new System.Drawing.Point(8, 96);
             this.verifyXmlRenderTree.Name = "verifyXmlRenderTree";
             this.verifyXmlRenderTree.Size = new System.Drawing.Size(680, 376);
@@ -2321,6 +2319,9 @@ namespace Microsoft.Xades.Test
 			Reference reference;
 			
 			reference = new Reference();
+
+            reference.DigestMethod = "http://www.w3.org/2001/04/xmldsig-more#gostr3411";
+
 			if (this.envelopedSignatureRadioButton.Checked)
 			{
 				if (this.newSignatureCheckBox.Checked)
@@ -2333,7 +2334,7 @@ namespace Microsoft.Xades.Test
 				this.xadesSignedXml = new XadesSignedXml(this.envelopedSignatureXmlDocument);
 
 				reference.Uri = "";
-				XmlDsigC14NTransform xmlDsigC14NTransform = new XmlDsigC14NTransform();
+                XmlDsigExcC14NTransform xmlDsigC14NTransform = new XmlDsigExcC14NTransform();
 				reference.AddTransform(xmlDsigC14NTransform);
 				xmlDsigEnvelopedSignatureTransform = new XmlDsigEnvelopedSignatureTransform();
 				reference.AddTransform(xmlDsigEnvelopedSignatureTransform);
@@ -2413,14 +2414,14 @@ namespace Microsoft.Xades.Test
 
 		private void AddCertificateInfoToSignature()
 		{
-            RSACryptoServiceProvider rsaKey = (RSACryptoServiceProvider) this.Certificate.PrivateKey;
-            this.xadesSignedXml.SigningKey = rsaKey;
+            AsymmetricAlgorithm key = this.Certificate.PrivateKey;
+            this.xadesSignedXml.SigningKey = key;
 
             KeyInfo keyInfo = new KeyInfo();
 			keyInfo.AddClause(new KeyInfoX509Data((X509Certificate) this.Certificate));
 			if (this.includeKeyValueCheckBox.Checked)
 			{
-                keyInfo.AddClause(new RSAKeyValue(rsaKey));
+                keyInfo.AddClause(new RSAKeyValue((RSACryptoServiceProvider)key));
 			}
 
 			this.xadesSignedXml.KeyInfo = keyInfo;
@@ -2593,7 +2594,9 @@ namespace Microsoft.Xades.Test
 		private void computeSignatureButton_Click(object sender, System.EventArgs e)
 		{
 			try
-			{
+            {
+                this.xadesSignedXml.SignedInfo.SignatureMethod = "http://www.w3.org/2001/04/xmldsig-more#gostr34102001-gostr3411";
+                this.xadesSignedXml.SignedInfo.CanonicalizationMethod = new XmlDsigExcC14NTransform().Algorithm;  
 				this.xadesSignedXml.ComputeSignature();
 				this.xadesSignedXml.SignatureValueId = this.signatureValueIdTextBox.Text;
 				this.ShowSignature();
