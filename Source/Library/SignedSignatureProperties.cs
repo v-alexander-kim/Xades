@@ -193,7 +193,7 @@ namespace Microsoft.Xades
 			{
 				throw new CryptographicException("SigningTime missing");
 			}
-            this.signingTime = XmlConvert.ToDateTime(xmlNodeList.Item(0).InnerText, XmlDateTimeSerializationMode.Local);
+            this.signingTime = XmlConvert.ToDateTime(xmlNodeList.Item(0).InnerText, XmlDateTimeSerializationMode.Utc);
 
 			xmlNodeList = xmlElement.SelectNodes("xsd:SigningCertificate", xmlNamespaceManager);
 			if (xmlNodeList.Count == 0)
@@ -252,7 +252,8 @@ namespace Microsoft.Xades
 				this.signingTime = DateTime.Now;
 			}
             bufferXmlElement = creationXmlDocument.CreateElement("xades", "SigningTime", XadesSignedXml.XadesNamespaceUri);
-			bufferXmlElement.InnerText = Convert.ToString(this.signingTime.ToString("s")); //ISO 8601 format as required in http://www.w3.org/TR/xmlschema-2/#dateTime 
+			//bufferXmlElement.InnerText = Convert.ToString(this.signingTime.ToString("s")); //ISO 8601 format as required in http://www.w3.org/TR/xmlschema-2/#dateTime 
+            bufferXmlElement.InnerText = Convert.ToString(this.signingTime.ToString("yyyy-MM-ddThh:mm:ss.fffzzz")); //ISO 8601 format as required in http://www.w3.org/TR/xmlschema-2/#dateTime 
 			retVal.AppendChild(bufferXmlElement);
 
 			if (this.signingCertificate != null && this.signingCertificate.HasChanged())
@@ -264,14 +265,14 @@ namespace Microsoft.Xades
 				throw new CryptographicException("SigningCertificate element missing in SignedSignatureProperties");
 			}
 
-			if (this.signaturePolicyIdentifier != null && this.signaturePolicyIdentifier.HasChanged())
-			{
-				retVal.AppendChild(creationXmlDocument.ImportNode(this.signaturePolicyIdentifier.GetXml(), true));
-			}
-			else
-			{
-				throw new CryptographicException("SignaturePolicyIdentifier element missing in SignedSignatureProperties");
-			}
+//			if (this.signaturePolicyIdentifier != null && this.signaturePolicyIdentifier.HasChanged())
+//			{
+//				retVal.AppendChild(creationXmlDocument.ImportNode(this.signaturePolicyIdentifier.GetXml(), true));
+//			}
+//			else
+//			{
+//				throw new CryptographicException("SignaturePolicyIdentifier element missing in SignedSignatureProperties");
+//			}
 
 			if (this.signatureProductionPlace != null && this.signatureProductionPlace.HasChanged())
 			{

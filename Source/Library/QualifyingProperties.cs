@@ -201,9 +201,9 @@ namespace Microsoft.Xades
 		{
 			XmlDocument creationXmlDocument;
 			XmlElement retVal;
-
 			creationXmlDocument = new XmlDocument();
             retVal = creationXmlDocument.CreateElement("xades", "QualifyingProperties", XadesSignedXml.XadesNamespaceUri);
+		    
             if (!String.IsNullOrEmpty(this.id))
 			{
 				retVal.SetAttribute("Id", this.id);
@@ -217,6 +217,10 @@ namespace Microsoft.Xades
 			{
 				throw new CryptographicException("QualifyingProperties Target attribute has no value");
 			}
+
+            var xmlAttribute = retVal.OwnerDocument.CreateAttribute("xmlns", "xades141", "http://www.w3.org/2000/xmlns/");
+            xmlAttribute.Value = "http://uri.etsi.org/01903/v1.4.1#";
+            retVal.Attributes.Append(xmlAttribute);
 
 			if (this.signedProperties != null && this.signedProperties.HasChanged())
 			{

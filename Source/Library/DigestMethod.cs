@@ -96,8 +96,8 @@ namespace Microsoft.Xades
 
 			creationXmlDocument = new XmlDocument();
             retVal = creationXmlDocument.CreateElement("ds", "DigestMethod", SignedXml.XmlDsigNamespaceUrl);
-
 			retVal.SetAttribute("Algorithm", this.algorithm);
+		    //retVal.IsEmpty = true;
 
 			return retVal;
 		}

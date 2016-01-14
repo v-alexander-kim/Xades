@@ -146,7 +146,8 @@ namespace Microsoft.Xades
 		/// <summary>
 		/// Mandated type name for the Uri reference to the SignedProperties element
 		/// </summary>
-		public const string SignedPropertiesType = "http://uri.etsi.org/01903/v1.3.2#SignedProperties";
+		//public const string SignedPropertiesType = "http://uri.etsi.org/01903/v1.3.2#SignedProperties";
+        public const string SignedPropertiesType = "http://uri.etsi.org/01903#SignedProperties";
 		#endregion
 
 		#region Private variables
@@ -474,6 +475,7 @@ namespace Microsoft.Xades
 				this.AddObject(dataObject); //Add the XAdES object
 
 				reference = new Reference();
+			    reference.DigestMethod = "http://www.w3.org/2001/04/xmldsig-more#gostr3411";
 				signedPropertiesIdBuffer = xadesObject.QualifyingProperties.SignedProperties.Id;
 				reference.Uri = "#" + signedPropertiesIdBuffer;
 				reference.Type = SignedPropertiesType;
