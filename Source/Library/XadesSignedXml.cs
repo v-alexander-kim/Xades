@@ -414,7 +414,10 @@ namespace Microsoft.Xades
             {
                 var xmlDocumentCloned = new XmlDocument();
                 xmlDocumentCloned.LoadXml(xmlDocument.OuterXml);
-                xmlDocumentCloned.DocumentElement.AppendChild(xmlDocumentCloned.ImportNode(cachedXadesObjectDocument.DocumentElement, true));
+
+                var signedDataContainer = this.GetIdElement(xmlDocumentCloned, "signed-data-container");
+                signedDataContainer.InsertBefore(xmlDocumentCloned.ImportNode(cachedXadesObjectDocument.DocumentElement, true),signedDataContainer.FirstChild);
+                //xmlDocumentCloned.DocumentElement.AppendChild(xmlDocumentCloned.ImportNode(cachedXadesObjectDocument.DocumentElement, true));
 
                 retVal = base.GetIdElement(xmlDocumentCloned, idValue);
                 if (retVal != null)
@@ -1478,10 +1481,19 @@ namespace Microsoft.Xades
                 //
 
                 //CanonicalXmlNodeList namespaces = (this.m_context == null) ? null : Utils.GetPropagatedAttributes(this.m_context);
-                FieldInfo SignedXml_m_context = SignedXml_Type.GetField("m_context", BindingFlags.NonPublic | BindingFlags.Instance);
+                //FieldInfo SignedXml_m_context = SignedXml_Type.GetField("m_context", BindingFlags.NonPublic | BindingFlags.Instance);
                 MethodInfo Utils_GetPropagatedAttributes = Utils_Type.GetMethod("GetPropagatedAttributes", BindingFlags.NonPublic | BindingFlags.Static);
-                object m_context = SignedXml_m_context.GetValue(this);
-                object namespaces = (m_context == null) ? null : Utils_GetPropagatedAttributes.Invoke(null, new object[] { m_context });
+
+                var xmlDocumentCloned = new XmlDocument();
+                xmlDocumentCloned.LoadXml(m_containingDocument.OuterXml);
+
+                var signedDataContainer = GetIdElement(xmlDocumentCloned, "signed-data-container");
+                signedDataContainer.InsertBefore(xmlDocumentCloned.ImportNode(document.DocumentElement, true), signedDataContainer.FirstChild);
+
+                object namespaces = Utils_GetPropagatedAttributes.Invoke(null, new object[] { signedDataContainer.FirstChild });
+
+                //object m_context = SignedXml_m_context.GetValue(this);
+                //object namespaces = (m_context == null) ? null : Utils_GetPropagatedAttributes.Invoke(null, new object[] { m_context });
                 //
 
                 // Utils.AddNamespaces(document.DocumentElement, namespaces);
