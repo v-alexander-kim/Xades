@@ -3632,6 +3632,14 @@
             our own GetC14NDigest with a namespace prefix for all XmlDsig nodes
             </summary>
         </member>
+        <member name="M:Microsoft.Xades.XadesSignedXml.GetSignedInfoHash(System.Security.Cryptography.HashAlgorithm@)">
+            <summary>
+            Calculates standalone SignedInfo hash
+            </summary>
+            <param name="hash"></param>
+            <returns></returns>
+            <exception cref="T:System.Security.Cryptography.CryptographicException"></exception>
+        </member>
         <member name="M:Microsoft.Xades.XadesSignedXml.BuildDigestedReferences">
             <summary>
             Copy of System.Security.Cryptography.Xml.SignedXml.BuildDigestedReferences() which will add a "ds" 

@@ -1303,7 +1303,6 @@ namespace Microsoft.Xades
         /// </summary>
         public new void ComputeSignature()
         {
-            this.BuildDigestedReferences();
             AsymmetricAlgorithm signingKey = this.SigningKey;
             if (signingKey == null)
             {
@@ -1327,23 +1326,49 @@ namespace Microsoft.Xades
                     this.SignedInfo.SignatureMethod = "http://www.w3.org/2000/09/xmldsig#dsa-sha1";
                 }
             }
-            SignatureDescription description = CryptoConfig.CreateFromName(this.SignedInfo.SignatureMethod) as SignatureDescription;
-            if (description == null)
-            {
-                throw new CryptographicException("Cryptography_Xml_SignatureDescriptionNotCreated");
-            }
-            HashAlgorithm hash = description.CreateDigest();
-            if (hash == null)
-            {
-                throw new CryptographicException("Cryptography_Xml_CreateHashAlgorithmFailed");
-            }
-            //this.GetC14NDigest(hash);
-            this.GetC14NDigest(hash, "ds");
+
+            HashAlgorithm hash;
+            var description = GetSignedInfoHash(out hash);
             //
             this.m_signature.SignatureValue = description.CreateFormatter(signingKey).CreateSignature(hash);
         }
 
-        /// <summary>
+	    private HashAlgorithm signedInfoHash = null;
+
+	    /// <summary>
+	    /// Calculates standalone SignedInfo hash
+	    /// </summary>
+	    /// <param name="hash"></param>
+	    /// <returns></returns>
+	    /// <exception cref="CryptographicException"></exception>
+	    public SignatureDescription GetSignedInfoHash(out HashAlgorithm hash)
+	    {
+	        SignatureDescription description;
+	        if (signedInfoHash != null)
+	        {
+                description = CryptoConfig.CreateFromName(this.SignedInfo.SignatureMethod) as SignatureDescription;
+	            hash = signedInfoHash;
+	            return description;
+	        }
+
+	        this.BuildDigestedReferences();
+	        description =
+	            CryptoConfig.CreateFromName(this.SignedInfo.SignatureMethod) as SignatureDescription;
+	        if (description == null)
+	        {
+	            throw new CryptographicException("Cryptography_Xml_SignatureDescriptionNotCreated");
+	        }
+	        hash = description.CreateDigest();
+	        if (hash == null)
+	        {
+	            throw new CryptographicException("Cryptography_Xml_CreateHashAlgorithmFailed");
+	        }
+	        this.GetC14NDigest(hash, "ds");
+	        this.signedInfoHash = hash;
+	        return description;
+	    }
+
+	    /// <summary>
         /// Copy of System.Security.Cryptography.Xml.SignedXml.BuildDigestedReferences() which will add a "ds" 
         /// namespace prefix to all XmlDsig nodes
         /// </summary>
