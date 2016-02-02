@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Microsoft.Xades</name>
+        <name>Microsoft.Xades.Gis</name>
     </assembly>
     <members>
         <member name="T:Microsoft.Xades.AllDataObjectsTimeStampCollection">
@@ -1234,6 +1234,13 @@
             New typed indexer for the collection
             </summary>
             <param name="index">Index of the object to retrieve from collection</param>
+        </member>
+        <member name="M:Microsoft.Xades.GIS.GisSignatureHelper.GetOidRepresentation(System.String)">
+            <summary>
+            Заменяет части IssuerName на OID. https://technet.microsoft.com/en-us/library/cc772812(WS.10).aspx
+            </summary>
+            <param name="issuerName"></param>
+            <returns></returns>
         </member>
         <member name="T:Microsoft.Xades.HashDataInfo">
             <summary>

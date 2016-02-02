@@ -9,7 +9,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ApplicationIcon />
     <AssemblyKeyContainerName />
-    <AssemblyName>Microsoft.Xades</AssemblyName>
+    <AssemblyName>Microsoft.Xades.Gis</AssemblyName>
     <AssemblyOriginatorKeyFile>Microsoft.Xades.snk</AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
@@ -71,7 +71,7 @@
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile />
     <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>bin\Release\Microsoft.Xades.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\Microsoft.Xades.Gis.xml</DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
@@ -89,6 +89,11 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\Lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CryptoPro.Sharpei.Base, Version=1.0.0.10, Culture=neutral, PublicKeyToken=473b8c5086e795f5, processorArchitecture=MSIL" />
+    <Reference Include="CryptoPro.Sharpei.Xml, Version=1.0.0.10, Culture=neutral, PublicKeyToken=473b8c5086e795f5, processorArchitecture=MSIL" />
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -214,6 +219,8 @@
     <Compile Include="EncapsulatedX509CertificateCollection.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GIS\GisSignatureHelper.cs" />
+    <Compile Include="GIS\XadesInfo.cs" />
     <Compile Include="HashDataInfo.cs">
       <SubType>Code</SubType>
     </Compile>

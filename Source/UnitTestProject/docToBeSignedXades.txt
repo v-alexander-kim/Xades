@@ -1,0 +1,12 @@
+﻿<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <h:RequestHeader xmlns="http://dom.gosuslugi.ru/schema/integration/8.5.0.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:h="http://dom.gosuslugi.ru/schema/integration/8.5.0.2/">
+      <Date>2016-01-28T08:47:54.1047372+03:00</Date>
+      <MessageGUID>b9890257-9146-4997-b80e-eb546f985b9e</MessageGUID>
+      <SenderID>793d2498-28c3-45ec-ab2a-bfb16d3302a6</SenderID>
+    </h:RequestHeader>
+  </s:Header>
+  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <exportNsiListRequest Id="signed-data-container" xmlns="http://dom.gosuslugi.ru/schema/integration/8.5.0.2/nsi/" />
+  </s:Body>
+</s:Envelope>

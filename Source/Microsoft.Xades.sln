@@ -1,8 +1,18 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{EE1DC57A-344A-4B0A-82CE-5FD328C14894}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "TestClient\TestClient.csproj", "{27438A93-E658-4F37-B485-919ED2000107}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "TestClient\TestClient.csproj", "{27438A93-E658-4F37-B485-919ED2000107}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{62052715-C97F-4B51-BE75-AC771338E812}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{73E8E642-EE66-4266-8368-2A9C7379FB56}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\BouncyCastle.Crypto.dll = Lib\BouncyCastle.Crypto.dll
+		Lib\Newtonsoft.Json.dll = Lib\Newtonsoft.Json.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +28,10 @@ Global
 		{27438A93-E658-4F37-B485-919ED2000107}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27438A93-E658-4F37-B485-919ED2000107}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27438A93-E658-4F37-B485-919ED2000107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62052715-C97F-4B51-BE75-AC771338E812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62052715-C97F-4B51-BE75-AC771338E812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62052715-C97F-4B51-BE75-AC771338E812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62052715-C97F-4B51-BE75-AC771338E812}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
