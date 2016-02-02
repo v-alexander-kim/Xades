@@ -60,7 +60,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CertificateHelper.cs" />
-    <Compile Include="TestClientServerIntegration.cs" />
+    <Compile Include="TestIntegrationClientServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
