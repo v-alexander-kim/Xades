@@ -100,6 +100,10 @@ namespace UnitTestProject
             xadesSignedXml.KeyInfo = keyInfo;
 
             var xadesObject = GisSignatureHelper.GetXadesObject(xadesInfo, signatureid);
+            var signTimeStr = xadesObject.QualifyingProperties.SignedProperties.SignedSignatureProperties.SigningTime.ToString("yyyy-MM-ddTHH:mm:ss.fffzzz");
+            Console.WriteLine(signTimeStr);
+            Assert.IsTrue(signTimeStr.Contains("+09"));
+
             xadesSignedXml.AddXadesObject(xadesObject);
 
             return xadesSignedXml;

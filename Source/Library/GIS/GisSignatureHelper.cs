@@ -84,7 +84,8 @@ namespace Microsoft.Xades.GIS
 
             signedSignatureProperties.SigningCertificate.CertCollection.Add(cert);
 
-            signedSignatureProperties.SigningTime = xadesInfo.SigningDateTimeUTC.AddMinutes(xadesInfo.TimeZoneOffsetMinutes);
+            var dtUnspecified = DateTime.SpecifyKind(xadesInfo.SigningDateTimeUTC, DateTimeKind.Unspecified);
+            signedSignatureProperties.SigningTime = new DateTimeOffset(dtUnspecified, new TimeSpan(0, xadesInfo.TimeZoneOffsetMinutes, 0));
             return xadesObject;
         }
 
@@ -142,7 +143,7 @@ namespace Microsoft.Xades.GIS
         private static string GetOidRepresentation(string issuerName)
         {
             var result = issuerName;
-            result = result.Replace(",E=", ",1.2.840.113549.1.9.1=");
+            result = result.Replace("E=", "1.2.840.113549.1.9.1=");
             return result;
         }
     }

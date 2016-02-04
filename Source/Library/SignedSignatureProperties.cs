@@ -25,7 +25,7 @@ namespace Microsoft.Xades
 	public class SignedSignatureProperties
 	{
 		#region Private variables
-		private DateTime signingTime;
+        private DateTimeOffset signingTime;
 		private SigningCertificate signingCertificate;
 		private SignaturePolicyIdentifier signaturePolicyIdentifier;
 		private SignatureProductionPlace signatureProductionPlace;
@@ -39,7 +39,7 @@ namespace Microsoft.Xades
 		/// qualifies the whole signature. An XML electronic signature aligned
 		/// with the present document MUST contain exactly one SigningTime element .
 		/// </summary>
-		public DateTime SigningTime
+        public DateTimeOffset SigningTime
 		{
 			get
 			{
@@ -149,7 +149,7 @@ namespace Microsoft.Xades
 		/// </summary>
 		public SignedSignatureProperties()
 		{
-			this.signingTime = DateTime.MinValue;
+            this.signingTime = DateTimeOffset.MinValue;
 			this.signingCertificate = new SigningCertificate();
 			this.signaturePolicyIdentifier = new SignaturePolicyIdentifier();
 			this.signatureProductionPlace = new SignatureProductionPlace();
@@ -247,13 +247,12 @@ namespace Microsoft.Xades
 			creationXmlDocument = new XmlDocument();
             retVal = creationXmlDocument.CreateElement("xades", "SignedSignatureProperties", XadesSignedXml.XadesNamespaceUri);
 
-			if (this.signingTime == DateTime.MinValue)
+            if (this.signingTime == DateTimeOffset.MinValue)
 			{ //SigningTime should be available
 				this.signingTime = DateTime.Now;
 			}
             bufferXmlElement = creationXmlDocument.CreateElement("xades", "SigningTime", XadesSignedXml.XadesNamespaceUri);
-			//bufferXmlElement.InnerText = Convert.ToString(this.signingTime.ToString("s")); //ISO 8601 format as required in http://www.w3.org/TR/xmlschema-2/#dateTime 
-            bufferXmlElement.InnerText = Convert.ToString(this.signingTime.ToString("yyyy-MM-ddTHH:mm:ss.fffzzz")); //ISO 8601 format as required in http://www.w3.org/TR/xmlschema-2/#dateTime 
+            bufferXmlElement.InnerText = signingTime.ToString("yyyy-MM-ddTHH:mm:ss.fffzzz");
 			retVal.AppendChild(bufferXmlElement);
 
 			if (this.signingCertificate != null && this.signingCertificate.HasChanged())
