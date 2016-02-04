@@ -84,9 +84,14 @@ namespace Microsoft.Xades.GIS
 
             signedSignatureProperties.SigningCertificate.CertCollection.Add(cert);
 
-            var dtUnspecified = DateTime.SpecifyKind(xadesInfo.SigningDateTimeUTC, DateTimeKind.Unspecified);
-            signedSignatureProperties.SigningTime = new DateTimeOffset(dtUnspecified, new TimeSpan(0, xadesInfo.TimeZoneOffsetMinutes, 0));
+            signedSignatureProperties.SigningTime = GetSigningTimeOffset(xadesInfo.SigningDateTimeUTC, xadesInfo.TimeZoneOffsetMinutes);
             return xadesObject;
+        }
+
+        public static DateTimeOffset GetSigningTimeOffset(DateTime dtUTC, int timeZoneOffsetMinutes)
+        {
+            var dtUnspecified = DateTime.SpecifyKind(dtUTC.AddMinutes(timeZoneOffsetMinutes), DateTimeKind.Unspecified);
+            return new DateTimeOffset(dtUnspecified, new TimeSpan(0, timeZoneOffsetMinutes, 0));
         }
 
         public static XadesSignedXml GetXadesSignedXml(X509Certificate2 certificate, XmlDocument originalDoc, string signatureid, string privateKeyPassword)

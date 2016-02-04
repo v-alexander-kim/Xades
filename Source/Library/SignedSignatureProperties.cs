@@ -24,7 +24,9 @@ namespace Microsoft.Xades
 	/// </summary>
 	public class SignedSignatureProperties
 	{
-		#region Private variables
+	    public const string SIGNING_TIME_FORMAT = "yyyy-MM-ddTHH:mm:ss.fffzzz";
+
+	    #region Private variables
         private DateTimeOffset signingTime;
 		private SigningCertificate signingCertificate;
 		private SignaturePolicyIdentifier signaturePolicyIdentifier;
@@ -252,7 +254,7 @@ namespace Microsoft.Xades
 				this.signingTime = DateTime.Now;
 			}
             bufferXmlElement = creationXmlDocument.CreateElement("xades", "SigningTime", XadesSignedXml.XadesNamespaceUri);
-            bufferXmlElement.InnerText = signingTime.ToString("yyyy-MM-ddTHH:mm:ss.fffzzz");
+            bufferXmlElement.InnerText = signingTime.ToString(SIGNING_TIME_FORMAT);
 			retVal.AppendChild(bufferXmlElement);
 
 			if (this.signingCertificate != null && this.signingCertificate.HasChanged())
