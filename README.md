@@ -8,7 +8,7 @@ Xades Kit for GIS JKH - Fork from Microsoft France
 
 Основной пример – TestIntegrationClientServer (https://github.com/springjazzy/Xades/blob/master/Source/UnitTestProject/TestIntegrationClientServer.cs).
 
-
+Данный branch - попытка избавится от CryptoPro.NET.
 
 
 
@@ -18,4 +18,6 @@ This solution is a library for XAdES-based signing. Its primary use-case is to s
 This library provides functionality needed for client-server realization of XAdES-based signing of messages.
 
 The main example is TestIntegrationClientServer (https://github.com/springjazzy/Xades/blob/master/Source/UnitTestProject/TestIntegrationClientServer.cs).
+
+The purpose of this branch is get rid of CryptoPro.NET library
 
