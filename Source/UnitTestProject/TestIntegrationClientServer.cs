@@ -1,11 +1,8 @@
 ﻿using System;
 using System.IO;
-using System.Security;
 using System.Security.Cryptography;
 using System.Text;
 using System.Xml;
-using CryptoPro.Sharpei;
-using CryptoPro.Sharpei.Xml;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Xades;
 using Microsoft.Xades.GIS;
@@ -17,9 +14,13 @@ namespace UnitTestProject
     public class TestIntegrationClientServer
     {
         // Здесь необходимо будет подставить отпечаток своего сертификата, которым будете подписывать сообщения на сервере
-        public const string CERTIFICATE_THUMBPRINT = "0A82411F51C4652B4EDAE075683CAFB9966F14FF";
+        //public const string CERTIFICATE_THUMBPRINT = "0A82411F51C4652B4EDAE075683CAFB9966F14FF";
+
+        // Здесь должен быть тестовый сертификат без гостовских алгоритмов
+        public const string CERTIFICATE_THUMBPRINT = "53B32A05617568D5A10196404A8401BB5DAD5B7B";
+        
         // Здесь необходимо будет подставить пароль сертификата, которым будете подписывать сообщения на сервере
-        public const string PRIVATE_KEY_PASSWORD = "qwe123";
+        public const string PRIVATE_KEY_PASSWORD = "";
 
         [TestMethod]
         [DeploymentItem("docToBeSignedXades.txt")]
@@ -43,7 +44,7 @@ namespace UnitTestProject
     {
         private readonly string _xmlStr;
         private readonly Client _client;
-
+        
         public Server(string xmlStr, Client client)
         {
             _xmlStr = xmlStr;
@@ -120,6 +121,8 @@ namespace UnitTestProject
 
     class Client
     {
+        public const string XmlDsigGost3410UrlObsolete = "http://www.w3.org/2001/04/xmldsig-more#gostr34102001-gostr3411";
+
         public string GetXadesInfo()
         {
             return File.ReadAllText("xadesInfo.txt");
@@ -147,15 +150,15 @@ namespace UnitTestProject
             var certificate = CertificateHelper.GetCertificateByThumbprint(TestIntegrationClientServer.CERTIFICATE_THUMBPRINT);
             Assert.IsNotNull(certificate);
 
-            var gost = (Gost3410CryptoServiceProvider) certificate.PrivateKey;
+            var gost = certificate.PrivateKey;
 
-            var secureString = new SecureString();
-            foreach (var ch in TestIntegrationClientServer.PRIVATE_KEY_PASSWORD)
-                secureString.AppendChar(ch);
+//            var secureString = new SecureString();
+//            foreach (var ch in TestIntegrationClientServer.PRIVATE_KEY_PASSWORD)
+//                secureString.AppendChar(ch);
 
 #pragma warning disable 612
             SignatureDescription signDescr =
-                (SignatureDescription) CryptoConfig.CreateFromName(CPSignedXml.XmlDsigGost3410UrlObsolete);
+                (SignatureDescription) CryptoConfig.CreateFromName(XmlDsigGost3410UrlObsolete);
 #pragma warning restore 612
             var base64String = Convert.ToBase64String(signDescr.CreateFormatter(gost).CreateSignature(hash));
             return base64String;

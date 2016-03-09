@@ -5,8 +5,6 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography.Xml;
 using System.Xml;
-using CryptoPro.Sharpei;
-using CryptoPro.Sharpei.Xml;
 using X509Certificate = Org.BouncyCastle.X509.X509Certificate;
 
 namespace Microsoft.Xades.GIS
@@ -14,6 +12,9 @@ namespace Microsoft.Xades.GIS
     public static class GisSignatureHelper
     {
         public const bool _PRESERVE_WHITESPACE = true;
+        public const string XmlDsigGost3411UrlObsolete = "http://www.w3.org/2001/04/xmldsig-more#gostr3411";
+        public const string XmlDsigGost3410UrlObsolete = "http://www.w3.org/2001/04/xmldsig-more#gostr34102001-gostr3411";
+        public const string XmlDsigCanonicalizationUrl = "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"; 
 
         public static string GetSignedRequestXades(string request, X509Certificate2 certificate, string privateKeyPassword)
         {
@@ -75,9 +76,11 @@ namespace Microsoft.Xades.GIS
                 }
             };
 
-            cert.CertDigest.DigestMethod.Algorithm = CPSignedXml.XmlDsigGost3411UrlObsolete;
+            cert.CertDigest.DigestMethod.Algorithm = XmlDsigGost3411UrlObsolete;
 
             var rawCertData = Convert.FromBase64String(xadesInfo.RawPK);
+
+            // TODO Заменить на вызов PInvoke или OpenSSL
             var pkHash = HashAlgorithm.Create("GOST3411");
             var hashValue = pkHash.ComputeHash(rawCertData);
             cert.CertDigest.DigestValue = hashValue;
@@ -94,14 +97,18 @@ namespace Microsoft.Xades.GIS
             return new DateTimeOffset(dtUnspecified, new TimeSpan(0, timeZoneOffsetMinutes, 0));
         }
 
+
+
         public static XadesSignedXml GetXadesSignedXml(X509Certificate2 certificate, XmlDocument originalDoc, string signatureid, string privateKeyPassword)
         {
             var secureString = new SecureString();
             foreach (var ch in privateKeyPassword)
                 secureString.AppendChar(ch);
 
-            var provider = (Gost3410CryptoServiceProvider)certificate.PrivateKey;
-            provider.SetContainerPassword(secureString);
+           // var provider = (Gost3410CryptoServiceProvider)certificate.PrivateKey;
+            var provider = certificate.PrivateKey;
+            //certificate.SetContainerPassword(privateKeyPassword);
+            //provider.SetContainerPassword(secureString);
 
             var signedXml = new XadesSignedXml(originalDoc) { SigningKey = provider };
 
@@ -111,15 +118,15 @@ namespace Microsoft.Xades.GIS
             var reference = new Reference
             {
                 Uri = "#signed-data-container",
-                DigestMethod = CPSignedXml.XmlDsigGost3411UrlObsolete,
+                DigestMethod = XmlDsigGost3411UrlObsolete,
                 Id = String.Format("{0}-ref0", signatureid)
             };
             reference.AddTransform(new XmlDsigEnvelopedSignatureTransform());
             reference.AddTransform(new XmlDsigExcC14NTransform());
             signedXml.AddReference(reference);
 
-            signedXml.SignedInfo.CanonicalizationMethod = SignedXml.XmlDsigCanonicalizationUrl;
-            signedXml.SignedInfo.SignatureMethod = CPSignedXml.XmlDsigGost3410UrlObsolete;
+            signedXml.SignedInfo.CanonicalizationMethod = XmlDsigCanonicalizationUrl;
+            signedXml.SignedInfo.SignatureMethod = XmlDsigGost3410UrlObsolete;
 
             return signedXml;
         }

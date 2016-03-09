@@ -92,8 +92,6 @@
     <Reference Include="BouncyCastle.Crypto">
       <HintPath>..\Lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="CryptoPro.Sharpei.Base, Version=1.4.0.10, Culture=neutral, PublicKeyToken=473b8c5086e795f5, processorArchitecture=MSIL" />
-    <Reference Include="CryptoPro.Sharpei.Xml, Version=1.4.0.10, Culture=neutral, PublicKeyToken=473b8c5086e795f5, processorArchitecture=MSIL" />
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -220,6 +218,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GIS\GisSignatureHelper.cs" />
+    <Compile Include="GIS\X509CertificateExtensions.cs" />
     <Compile Include="GIS\XadesInfo.cs" />
     <Compile Include="HashDataInfo.cs">
       <SubType>Code</SubType>
