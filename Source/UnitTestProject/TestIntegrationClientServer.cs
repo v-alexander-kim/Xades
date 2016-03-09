@@ -20,7 +20,7 @@ namespace UnitTestProject
         public const string CERTIFICATE_THUMBPRINT = "53B32A05617568D5A10196404A8401BB5DAD5B7B";
         
         // Здесь необходимо будет подставить пароль сертификата, которым будете подписывать сообщения на сервере
-        public const string PRIVATE_KEY_PASSWORD = "";
+        public const string PRIVATE_KEY_PASSWORD = "123";
 
         [TestMethod]
         [DeploymentItem("docToBeSignedXades.txt")]
