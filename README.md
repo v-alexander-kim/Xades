@@ -17,5 +17,8 @@ This solution is a library for XAdES-based signing. Its primary use-case is to s
 
 This library provides functionality needed for client-server realization of XAdES-based signing of messages.
 
+
+* [Public chat room](https://gitter.im/springjazzy/GIS_JKH_Integration) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/springjazzy/GIS_JKH_Integration?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 The main example is TestIntegrationClientServer (https://github.com/springjazzy/Xades/blob/master/Source/UnitTestProject/TestIntegrationClientServer.cs).
 
