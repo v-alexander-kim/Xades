@@ -9,7 +9,7 @@ Xades Kit for GIS JKH - Fork from Microsoft France
 Основной пример – TestIntegrationClientServer (https://github.com/springjazzy/Xades/blob/master/Source/UnitTestProject/TestIntegrationClientServer.cs).
 
 
-
+* [Общий чат](https://gitter.im/springjazzy/GIS_JKH_Integration)[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/springjazzy/GIS_JKH_Integration?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 
 English:
