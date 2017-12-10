@@ -17,7 +17,7 @@ namespace UnitTestProject
     public class TestIntegrationClientServer
     {
         // Здесь необходимо будет подставить отпечаток своего сертификата, которым будете подписывать сообщения на сервере
-        public const string CERTIFICATE_THUMBPRINT = "0A82411F51C4652B4EDAE075683CAFB9966F14FF";
+        public const string CERTIFICATE_THUMBPRINT = "0051ed3f174d255687963b0fc9966de84e605d80";
         // Здесь необходимо будет подставить пароль сертификата, которым будете подписывать сообщения на сервере
         public const string PRIVATE_KEY_PASSWORD = "qwe123";
 
@@ -85,6 +85,8 @@ namespace UnitTestProject
 
             Console.WriteLine("Получившееся сообщение:");
             Console.WriteLine(originalDoc.OuterXml);
+
+            Assert.IsFalse(originalDoc.OuterXml.Contains("unstructuredName"));
         }
 
         private XadesSignedXml GetXadesSignedXml(XadesInfo xadesInfo, XmlDocument originalDoc)

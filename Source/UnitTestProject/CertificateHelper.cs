@@ -10,8 +10,7 @@ namespace UnitTestProject
     {
         public static X509Certificate2 GetCertificateByThumbprint(string certificateThumbprint)
         {
-            var certificateStore = new X509Store((StoreName)Enum.Parse(typeof(StoreName), "My"),
-                (StoreLocation)Enum.Parse(typeof(StoreLocation), "CurrentUser"));
+            var certificateStore = new X509Store(StoreName.My, StoreLocation.LocalMachine);
             certificateStore.Open(OpenFlags.ReadOnly);
             var certificateCollection = certificateStore.Certificates.Find((X509FindType)Enum.Parse(typeof(X509FindType), "FindByThumbprint"), certificateThumbprint, false);
             return certificateCollection.Count != 0 ? certificateCollection[0] : null;
