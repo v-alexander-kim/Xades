@@ -1,2 +1,13 @@
 bin
 obj
+/.vs
+/Source/.vs/Microsoft.Xades/v15
+/Source/Library/Library.v3.ncrunchproject.user
+/Source/Library/Library.v3.ncrunchproject
+/Source/TestClient
+/Source/UnitTestProject/UnitTestProject.v3.ncrunchproject.user
+/Source/UnitTestProject/UnitTestProject.v3.ncrunchproject
+/Source/_NCrunch_Microsoft.Xades
+/Source/Microsoft.Xades.v3.ncrunchsolution.user
+/Source/Microsoft.Xades.v3.ncrunchsolution
+/Source/Microsoft.Xades.sln.DotSettings.user

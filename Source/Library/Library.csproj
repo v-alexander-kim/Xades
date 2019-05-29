@@ -220,6 +220,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GIS\GisSignatureHelper.cs" />
+    <Compile Include="GIS\SigningKeyProvider.cs" />
     <Compile Include="GIS\XadesInfo.cs" />
     <Compile Include="HashDataInfo.cs">
       <SubType>Code</SubType>

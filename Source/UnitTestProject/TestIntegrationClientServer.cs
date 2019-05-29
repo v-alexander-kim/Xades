@@ -94,19 +94,22 @@ namespace UnitTestProject
             var certificate = CertificateHelper.GetCertificateByThumbprint(TestIntegrationClientServer.CERTIFICATE_THUMBPRINT);
             Assert.IsNotNull(certificate);
 
+            var provider = SigningKeyProvider.GetProvider(certificate);
+            provider.SetCointainerPassword(TestIntegrationClientServer.PRIVATE_KEY_PASSWORD);
+
             var signatureid = String.Format("xmldsig-{0}", Guid.NewGuid().ToString().ToLower());
 
-            var xadesSignedXml = GisSignatureHelper.GetXadesSignedXml(certificate, originalDoc, signatureid, TestIntegrationClientServer.PRIVATE_KEY_PASSWORD);
+            var xadesSignedXml = GisSignatureHelper.GetXadesSignedXml(provider, originalDoc, signatureid);
 
             var keyInfo = GisSignatureHelper.GetKeyInfo(xadesInfo.RawPK);
             xadesSignedXml.KeyInfo = keyInfo;
 
-            var xadesObject = GisSignatureHelper.GetXadesObject(xadesInfo, signatureid);
+            var xadesObject = GisSignatureHelper.GetXadesObject(provider, xadesInfo, signatureid);
             var signTimeStr = xadesObject.QualifyingProperties.SignedProperties.SignedSignatureProperties.SigningTime.ToString("yyyy-MM-ddTHH:mm:ss.fffzzz");
             Console.WriteLine(signTimeStr);
             Assert.IsTrue(signTimeStr.Contains("+09"));
 
-            xadesSignedXml.AddXadesObject(xadesObject);
+            xadesSignedXml.AddXadesObject(xadesObject, provider.DigestMethod);
 
             return xadesSignedXml;
         }

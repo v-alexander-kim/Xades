@@ -17,19 +17,22 @@ namespace Microsoft.Xades.GIS
 
         public static string GetSignedRequestXades(string request, X509Certificate2 certificate, string privateKeyPassword)
         {
+            var provider = SigningKeyProvider.GetProvider(certificate);
+            provider.SetCointainerPassword(privateKeyPassword);
+
             var originalDoc = new XmlDocument() { PreserveWhitespace = _PRESERVE_WHITESPACE };
             originalDoc.LoadXml(request);
 
             var signatureid = String.Format("xmldsig-{0}", Guid.NewGuid().ToString().ToLower());
-            var signedXml = GetXadesSignedXml(certificate, originalDoc, signatureid, privateKeyPassword);
+            var signedXml = GetXadesSignedXml(provider, originalDoc, signatureid);
 
             var keyInfo = GetKeyInfo(Convert.ToBase64String(certificate.GetRawCertData()));
             signedXml.KeyInfo = keyInfo;
 
             var xadesInfo = GetXadesInfo(certificate);
 
-            var xadesObject = GetXadesObject(xadesInfo, signatureid);
-            signedXml.AddXadesObject(xadesObject);
+            var xadesObject = GetXadesObject(provider, xadesInfo, signatureid);
+            signedXml.AddXadesObject(xadesObject, provider.DigestMethod);
 
             signedXml.ComputeSignature();
 
@@ -55,7 +58,7 @@ namespace Microsoft.Xades.GIS
             signedDataContainer.InsertBefore(originalDoc.ImportNode(xmlSig, true), signedDataContainer.FirstChild);
         }
 
-        public static XadesObject GetXadesObject(XadesInfo xadesInfo, string signatureid)
+        public static XadesObject GetXadesObject(SigningKeyProvider provider, XadesInfo xadesInfo, string signatureid)
         {
             XadesObject xadesObject = new XadesObject();
             xadesObject.QualifyingProperties.Target = String.Format("#{0}", signatureid);
@@ -75,10 +78,10 @@ namespace Microsoft.Xades.GIS
                 }
             };
 
-            cert.CertDigest.DigestMethod.Algorithm = CPSignedXml.XmlDsigGost3411UrlObsolete;
+            cert.CertDigest.DigestMethod.Algorithm = provider.DigestMethod;
 
             var rawCertData = Convert.FromBase64String(xadesInfo.RawPK);
-            var pkHash = HashAlgorithm.Create("GOST3411");
+            var pkHash = HashAlgorithm.Create(provider.HashAlgorithmName);
             var hashValue = pkHash.ComputeHash(rawCertData);
             cert.CertDigest.DigestValue = hashValue;
 
@@ -94,16 +97,9 @@ namespace Microsoft.Xades.GIS
             return new DateTimeOffset(dtUnspecified, new TimeSpan(0, timeZoneOffsetMinutes, 0));
         }
 
-        public static XadesSignedXml GetXadesSignedXml(X509Certificate2 certificate, XmlDocument originalDoc, string signatureid, string privateKeyPassword)
+        public static XadesSignedXml GetXadesSignedXml(SigningKeyProvider provider, XmlDocument originalDoc, string signatureid)
         {
-            var secureString = new SecureString();
-            foreach (var ch in privateKeyPassword)
-                secureString.AppendChar(ch);
-
-            var provider = (Gost3410CryptoServiceProvider)certificate.PrivateKey;
-            provider.SetContainerPassword(secureString);
-
-            var signedXml = new XadesSignedXml(originalDoc) { SigningKey = provider };
+            var signedXml = new XadesSignedXml(originalDoc) { SigningKey = provider.SigningKey };
 
             signedXml.Signature.Id = signatureid;
             signedXml.SignatureValueId = String.Format("{0}-sigvalue", signatureid);
@@ -111,7 +107,7 @@ namespace Microsoft.Xades.GIS
             var reference = new Reference
             {
                 Uri = "#signed-data-container",
-                DigestMethod = CPSignedXml.XmlDsigGost3411UrlObsolete,
+                DigestMethod = provider.DigestMethod,
                 Id = String.Format("{0}-ref0", signatureid)
             };
             reference.AddTransform(new XmlDsigEnvelopedSignatureTransform());
@@ -119,7 +115,7 @@ namespace Microsoft.Xades.GIS
             signedXml.AddReference(reference);
 
             signedXml.SignedInfo.CanonicalizationMethod = SignedXml.XmlDsigCanonicalizationUrl;
-            signedXml.SignedInfo.SignatureMethod = CPSignedXml.XmlDsigGost3410UrlObsolete;
+            signedXml.SignedInfo.SignatureMethod = provider.SignatureMethod;
 
             return signedXml;
         }

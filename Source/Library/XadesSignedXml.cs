@@ -22,6 +22,7 @@ using System.Security.Cryptography.Xml;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections;
+using Microsoft.Xades.GIS;
 
 namespace Microsoft.Xades
 {
@@ -460,11 +461,12 @@ namespace Microsoft.Xades
             return retVal;
         }
 
-		/// <summary>
-		/// Add a XAdES object to the signature
-		/// </summary>
-		/// <param name="xadesObject">XAdES object to add to signature</param>
-		public void AddXadesObject(XadesObject xadesObject)
+        /// <summary>
+        /// Add a XAdES object to the signature
+        /// </summary>
+        /// <param name="xadesObject">XAdES object to add to signature</param>
+        /// <param name="digestMethod">Overridden digest method</param>
+        public void AddXadesObject(XadesObject xadesObject, string digestMethod = null)
 		{
 			Reference reference;
 			DataObject dataObject;
@@ -478,7 +480,7 @@ namespace Microsoft.Xades
 				this.AddObject(dataObject); //Add the XAdES object
 
 				reference = new Reference();
-			    reference.DigestMethod = "http://www.w3.org/2001/04/xmldsig-more#gostr3411";
+			    reference.DigestMethod =  digestMethod ?? "http://www.w3.org/2001/04/xmldsig-more#gostr3411";
 				signedPropertiesIdBuffer = xadesObject.QualifyingProperties.SignedProperties.Id;
 				reference.Uri = "#" + signedPropertiesIdBuffer;
 				reference.Type = SignedPropertiesType;
