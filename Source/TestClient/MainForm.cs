@@ -26,6 +26,7 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.Xml;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.Xades;
+using Microsoft.Xades.GIS;
 using System.Net;
 using System.Reflection;
 using System.Text;
@@ -39,6 +40,7 @@ namespace Microsoft.Xades.Test
 	{
 		private string tempFile;
         private X509Certificate2 Certificate;
+        private SigningKeyProvider Provider;
         private X509Chain Chain;
 		private XmlDocument envelopedSignatureXmlDocument;
 		private Microsoft.Xades.XadesSignedXml xadesSignedXml;
@@ -2432,6 +2434,7 @@ namespace Microsoft.Xades.Test
             this.Certificate = this.LetUserChooseCertificate();
 			if (this.Certificate != null)
 			{
+                this.Provider = SigningKeyProvider.GetProvider(this.Certificate);
                 this.Chain = new X509Chain();
 
                 this.Chain.ChainPolicy.RevocationFlag = X509RevocationFlag.EntireChain;
@@ -2581,7 +2584,7 @@ namespace Microsoft.Xades.Test
 					xadesObject.QualifyingProperties.SignedProperties.SignedDataObjectProperties,
 					xadesObject.QualifyingProperties.UnsignedProperties.UnsignedSignatureProperties);
 
-				this.xadesSignedXml.AddXadesObject(xadesObject);
+				this.xadesSignedXml.AddXadesObject(xadesObject, this.Provider?.DigestMethod);
 			}
 			catch (Exception exception)
 			{
@@ -2668,7 +2671,7 @@ namespace Microsoft.Xades.Test
                 signedSignatureProperties.SigningCertificate.CertCollection.Add(cert);
 				signedSignatureProperties.SigningTime = DateTime.Parse(this.signingTimeTextBox.Text);
 				signedSignatureProperties.SignaturePolicyIdentifier.SignaturePolicyImplied = true;
-				counterSignature.AddXadesObject(counterSignatureXadesObject);
+				counterSignature.AddXadesObject(counterSignatureXadesObject, this.Provider?.DigestMethod);
 
 				counterSignature.ComputeSignature();
 

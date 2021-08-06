@@ -17,9 +17,9 @@ namespace UnitTestProject
     public class TestIntegrationClientServer
     {
         // Здесь необходимо будет подставить отпечаток своего сертификата, которым будете подписывать сообщения на сервере
-        public const string CERTIFICATE_THUMBPRINT = "0051ed3f174d255687963b0fc9966de84e605d80";
+        public const string CERTIFICATE_THUMBPRINT = "279fdf8e75c82c237d776487939951ad28f3df07";
         // Здесь необходимо будет подставить пароль сертификата, которым будете подписывать сообщения на сервере
-        public const string PRIVATE_KEY_PASSWORD = "qwe123";
+        public const string PRIVATE_KEY_PASSWORD = "";
 
         [TestMethod]
         [DeploymentItem("docToBeSignedXades.txt")]
@@ -27,7 +27,7 @@ namespace UnitTestProject
         public void Test()
         {
             Assert.IsFalse(string.IsNullOrWhiteSpace(CERTIFICATE_THUMBPRINT));
-            Assert.IsFalse(string.IsNullOrWhiteSpace(PRIVATE_KEY_PASSWORD));
+            //Assert.IsFalse(string.IsNullOrWhiteSpace(PRIVATE_KEY_PASSWORD));
 
             string xmlStr = File.ReadAllText("docToBeSignedXades.txt");
 
@@ -95,7 +95,7 @@ namespace UnitTestProject
             Assert.IsNotNull(certificate);
 
             var provider = SigningKeyProvider.GetProvider(certificate);
-            provider.SetCointainerPassword(TestIntegrationClientServer.PRIVATE_KEY_PASSWORD);
+           // provider.SetCointainerPassword(TestIntegrationClientServer.PRIVATE_KEY_PASSWORD);
 
             var signatureid = String.Format("xmldsig-{0}", Guid.NewGuid().ToString().ToLower());
 
@@ -152,17 +152,15 @@ namespace UnitTestProject
             var certificate = CertificateHelper.GetCertificateByThumbprint(TestIntegrationClientServer.CERTIFICATE_THUMBPRINT);
             Assert.IsNotNull(certificate);
 
-            var gost = (Gost3410CryptoServiceProvider) certificate.PrivateKey;
-
             var secureString = new SecureString();
             foreach (var ch in TestIntegrationClientServer.PRIVATE_KEY_PASSWORD)
                 secureString.AppendChar(ch);
 
 #pragma warning disable 612
             SignatureDescription signDescr =
-                (SignatureDescription) CryptoConfig.CreateFromName(CPSignedXml.XmlDsigGost3410UrlObsolete);
+                (SignatureDescription) CryptoConfig.CreateFromName(CPSignedXml.XmlDsigGost3410_2012_256Url);
 #pragma warning restore 612
-            var base64String = Convert.ToBase64String(signDescr.CreateFormatter(gost).CreateSignature(hash));
+            var base64String = Convert.ToBase64String(signDescr.CreateFormatter(certificate.PrivateKey).CreateSignature(hash));
             return base64String;
         }
 
