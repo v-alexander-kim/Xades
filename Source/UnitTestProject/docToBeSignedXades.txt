@@ -1,11 +1,13 @@
 ﻿<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
-  <s:Header>
-    <h:RequestHeader xmlns="http://dom.gosuslugi.ru/schema/integration/8.5.0.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:h="http://dom.gosuslugi.ru/schema/integration/8.5.0.2/">
-      <Date>2021-08-06T16:47:54.1047372+03:00</Date>
-      <MessageGUID>793d2498-28c3-45ec-ab2a-bfb16d3302a6</MessageGUID>
-    </h:RequestHeader>
-  </s:Header>
-  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <exportNsiListRequest Id="signed-data-container" xmlns="http://dom.gosuslugi.ru/schema/integration/8.5.0.2/nsi/" />
-  </s:Body>
+    <s:Header>
+        <ISRequestHeader xmlns="http://dom.gosuslugi.ru/schema/integration/base/">
+            <Date>2021-08-04T14:10:08.857+03:00</Date>
+            <MessageGUID>aaf1881c-aea9-47c3-b17a-4077efe56301</MessageGUID>
+        </ISRequestHeader>
+    </s:Header>
+    <s:Body>
+        <exportNsiListRequest Id="signed-data-container" xmlns:h="http://dom.gosuslugi.ru/schema/integration/base/" xmlns="http://dom.gosuslugi.ru/schema/integration/nsi-common/" xmlns:nsi="http://dom.gosuslugi.ru/schema/integration/nsi-base/" h:version="10.0.1.2">
+            <nsi:ListGroup>NSI</nsi:ListGroup>
+        </exportNsiListRequest>
+    </s:Body>
 </s:Envelope>
